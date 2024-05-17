@@ -33,7 +33,7 @@ jobs:
         run: yarn install && yarn
 
       - name: switch ruby version & dependencies
-        run: rbenv install --skip-existing && bundle install && cp .env.example .env
+        run: bundle install && cp .env.example .env
         
       - name: android (TV) debug
         run: yarn android 
