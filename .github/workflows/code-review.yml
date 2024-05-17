@@ -30,13 +30,10 @@ jobs:
           node-version: '16'
 
       - name: Run Yarn Install & node dependencies
-        run: yarn install && yarn
+        run: yarn install && yarn && yarn pods && cp .env.example .env
         
       - name: android (TV) debug
         run: yarn android 
-        
-      - name: android (TV) release
-        run: yarn android:release
 
       - name: List the .apks compiled
         run: ls ./android/app/build/outputs/apk/release/ -hal
