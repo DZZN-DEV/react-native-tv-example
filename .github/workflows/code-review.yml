@@ -31,9 +31,6 @@ jobs:
 
       - name: Run Yarn Install & node dependencies
         run: yarn install && yarn
-
-      - name: switch ruby version & dependencies
-        run: bundle install && cp .env.example .env
         
       - name: android (TV) debug
         run: yarn android 
