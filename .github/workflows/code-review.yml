@@ -29,15 +29,9 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Run NVM Install
-        run: nvm install
+      - name: Run Yarn Install & node dependencies
+        run: yarn install && yarn
 
-      - name: Run Yarn Install
-        run: yarn install
-
-      - name: install node dependencies
-        run: yarn
-        
       - name: switch ruby version & dependencies
         run: rbenv install --skip-existing && bundle install && cp .env.example .env
         
